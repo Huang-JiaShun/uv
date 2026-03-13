@@ -604,6 +604,11 @@ pub struct Concurrency {
     pub installs: Option<NonZeroUsize>,
 }
 
+#[derive(Clone, Debug)]
+pub struct GpuEnvVars {
+    pub cuda_driver_version: Option<String>,
+}
+
 /// A boolean flag parsed from an environment variable.
 ///
 /// Stores both the value and the environment variable name for use in error messages.
